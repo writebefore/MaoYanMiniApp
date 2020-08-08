@@ -1,0 +1,30 @@
+<!-- pages/movie/movie.wxml -->
+<view class="container">
+    <!-- 顶部导航条 -->
+    <view class="header">
+        <!-- 当前城市 -->
+        <view class="header-left header-left-icon">{{localCity}}</view>
+        <!-- tab 选项卡 -->
+        <view class="header-mid" bindtap="bottomLineChange">
+            <view id="hotPage" class="{{isChoose ? 'text-choose bottom-line' : ''}}">热映</view>
+            <view id="waitMovie" class="{{!isChoose ? 'text-choose bottom-line' : ''}}">待映</view>
+        </view>
+        <!-- 搜索 -->
+        <view class="header-right">
+            <image class="searchIcon" src="../../icons/hover/sousuo.png" />
+        </view>
+    </view>
+    <!-- Tab 内容容器 -->
+    <view class="tabMain">
+        <!-- 电影热映页 -->
+        <view class="{{isChoose ? 'hotPageContent' : 'isHidden'}}">
+            <movie-btn btnType="sellBtn">购票</movie-btn>
+            <movie-btn btnType="presellBtn">预售</movie-btn>
+            <movie-btn btnType="wantBtn">想看</movie-btn>
+            <movie-btn btnType="interestBtn">想看</movie-btn>
+            
+        </view>
+        <!-- 电影待映页 -->
+        <view class="{{!isChoose ? 'waitPageContent' : 'isHidden'}}">2</view>
+    </view>
+</view>

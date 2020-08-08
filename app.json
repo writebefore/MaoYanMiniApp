@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/movie/movie",
+    "pages/cinema/cinema",
+    "pages/mine/mine"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#DC403B",
+    "navigationBarTitleText": "猫眼电影",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#737373",
+    "selectedColor": "#F93E38",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/movie/movie",
+        "text": "电影",
+        "iconPath": "./icons/normal/dianying.png",
+        "selectedIconPath": "./icons/hover/dianying.png"
+      },
+      {
+        "pagePath": "pages/cinema/cinema",
+        "text": "影院",
+        "iconPath": "./icons/normal/yingyuan.png",
+        "selectedIconPath": "./icons/hover/yingyuan.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "./icons/normal/wode.png",
+        "selectedIconPath": "./icons/hover/wode.png"
+      }
+    ]
+  }
+}

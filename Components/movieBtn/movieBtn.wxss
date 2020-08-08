@@ -1,0 +1,64 @@
+/* Components/movieBtn/movieBtn.wxss */
+.sellBtn {
+    background-color: #DC5042;
+    color: #FFFFFF;
+    height: 60rpx;
+    border-radius: 8rpx;
+    text-align: center;
+    line-height: 60rpx;
+    font-size: 28rpx;
+    margin: 10rpx;
+    display: inline-block;
+    padding: 0 30rpx;
+}
+
+.presellBtn {
+    background-color: #6BAEE5;
+    color: #FFFFFF;
+    height: 60rpx;
+    border-radius: 8rpx;
+    text-align: center;
+    line-height: 60rpx;
+    font-size: 28rpx;
+    margin: 10rpx;
+    display: inline-block;
+    padding: 0 30rpx;
+}
+
+.wantBtn {
+    background-color: #FAAF00;
+    color: #FFFFFF;
+    height: 60rpx;
+    border-radius: 8rpx;
+    text-align: center;
+    line-height: 60rpx;
+    font-size: 28rpx;
+    margin: 10rpx;
+    display: inline-block;
+    padding: 0 30rpx;
+}
+
+.interestBtn{
+    background-color: transparent;
+    color: #EEA79A;
+    height: 56rpx;
+    border: 2rpx solid #EEA79A;
+    border-radius: 8rpx;
+    text-align: center;
+    line-height: 56rpx;
+    font-size: 28rpx;
+    margin: 10rpx;
+    display: inline-block;
+    padding: 0 30rpx 0 25rpx;
+}
+
+.interestBtn text{
+    display: inline-block;
+}
+
+.intBtnImg{
+    margin: 0 5rpx;
+    width: 28rpx;
+    height: 28rpx;
+    transform: translateY(4rpx);
+}

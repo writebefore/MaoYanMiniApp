@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "movie-btn":"../../Components/movieBtn/movieBtn",
+    "movie-list":"../../Components/movieList/movieList"
+  },
+  "enablePullDownRefresh":true,
+  "backgroundTextStyle":"dark"
+}
