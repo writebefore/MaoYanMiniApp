@@ -41,24 +41,21 @@
 .interestBtn{
     background-color: transparent;
     color: #EEA79A;
-    height: 56rpx;
+    height: 60rpx;
     border: 2rpx solid #EEA79A;
     border-radius: 8rpx;
     text-align: center;
-    line-height: 56rpx;
     font-size: 28rpx;
     margin: 10rpx;
-    display: inline-block;
+    line-height: 60rpx;
+    display: inline-flex;
+    align-items: center;
     padding: 0 30rpx 0 25rpx;
-}
-
-.interestBtn text{
-    display: inline-block;
+    transform: translateY(4rpx);
 }
 
 .intBtnImg{
     margin: 0 5rpx;
     width: 28rpx;
     height: 28rpx;
-    transform: translateY(4rpx);
 }
