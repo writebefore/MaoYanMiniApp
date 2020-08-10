@@ -18,11 +18,11 @@
     <view class="tabMain">
         <!-- 电影热映页 -->
         <view class="{{isChoose ? 'hotPageContent' : 'isHidden'}}">
-            <movie-btn btnType="sellBtn">购票</movie-btn>
+            <!-- <movie-btn btnType="sellBtn">购票</movie-btn>
             <movie-btn btnType="presellBtn">预售</movie-btn>
             <movie-btn btnType="wantBtn">想看</movie-btn>
-            <movie-btn btnType="interestBtn">想看</movie-btn>
-            <movie-list></movie-list>
+            <movie-btn btnType="interestBtn">想看</movie-btn> -->
+            <movie-list version="v2d imax"></movie-list>
         </view>
         <!-- 电影待映页 -->
         <view class="{{!isChoose ? 'waitPageContent' : 'isHidden'}}">2</view>

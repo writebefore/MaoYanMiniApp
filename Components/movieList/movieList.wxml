@@ -1,2 +1,20 @@
 <!--Components/movieList.wxml-->
-<text>Components/movieList.wxml</text>
+<view class="movieList bottomLine">
+    <view class="leftContainer">
+        <image class="movieImg" src="{{movieImg}}" />
+    </view>
+    <view class="rightContainer">
+        <view class="movieDesc">
+            <view class="movieDesc__title">
+                <text>{{movieTitle}}</text>
+                <i class="movieDesc__title--{{version}}"></i>
+            </view>
+            <view class="movieDesc__score">观众评分<text>{{score}}</text></view>
+            <view class="movieDesc__actors">主演:<text>{{actor}}</text></view>
+            <view class="movieDesc__showInfo">{{showInfo}}</view>
+        </view>
+        <view class="btnContainer">
+            <movie-btn btnType="{{btnType}}">购票</movie-btn>
+        </view>
+    </view>
+</view>

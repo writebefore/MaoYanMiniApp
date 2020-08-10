@@ -8,10 +8,12 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#DC403B",
     "navigationBarTitleText": "猫眼电影",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+    "backgroundColor":"#eeeeee"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
+  
   "tabBar": {
     "color": "#737373",
     "selectedColor": "#F93E38",

@@ -22,15 +22,17 @@ Component({
   /**
    * 组件的初始数据
    */
-  data: {},
+  data: {
+    // 校验按钮类型
+    btnTypeList:["sellBtn","presellBtn","wantBtn","interestBtn"]
+  },
 
   /**
    * 组件的方法列表
    */
   methods: {
     btnReady(btnType = "sellBtn") {
-      console.log(btnType);
-      return btnType;
+       return btnType;
     },
   },
 
