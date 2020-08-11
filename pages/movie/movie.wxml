@@ -18,12 +18,10 @@
     <view class="tabMain">
         <!-- 电影热映页 -->
         <view class="{{isChoose ? 'hotPageContent' : 'isHidden'}}">
-            <!-- <movie-btn btnType="sellBtn">购票</movie-btn>
-            <movie-btn btnType="presellBtn">预售</movie-btn>
-            <movie-btn btnType="wantBtn">想看</movie-btn>
-            <movie-btn btnType="interestBtn">想看</movie-btn> -->
-            <movie-list version="v2d imax"></movie-list>
-            <scroll-view scroll-x="true">
+            <block wx:for="{{movieData}}" wx:key="id">
+                <movie-list movieImg="{{item.img}}" movieTitle="{{item.nm}}" version="{{item.version}}" score="{{item.sc}}" wish="{{item.wish}}" actor="{{item.star}}" showInfo="{{item.showInfo}}" showst="{{item.showst}}"></movie-list>
+            </block>
+            <!-- <scroll-view scroll-x="true">
             <view scroll-x="true" class="banner">
             <movie-trailer></movie-trailer>
             <movie-trailer></movie-trailer>
@@ -32,7 +30,7 @@
             <movie-trailer></movie-trailer>
             <movie-trailer></movie-trailer>
             </view>
-            </scroll-view>
+            </scroll-view> -->
         </view>
         <!-- 电影待映页 -->
         <view class="{{!isChoose ? 'waitPageContent' : 'isHidden'}}">2</view>

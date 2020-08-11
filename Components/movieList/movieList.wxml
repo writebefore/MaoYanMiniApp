@@ -1,4 +1,4 @@
-<!--Components/movieList.wxml-->
+<!-- Components/movieList.wxml -->
 <view class="movieList bottomLine">
     <view class="leftContainer">
         <image class="movieImg" src="{{movieImg}}" />
@@ -9,12 +9,23 @@
                 <text>{{movieTitle}}</text>
                 <i class="movieDesc__title--{{version}}"></i>
             </view>
-            <view class="movieDesc__score">观众评分<text>{{score}}</text></view>
-            <view class="movieDesc__actors">主演:<text>{{actor}}</text></view>
+            <view class="movieDesc__score">
+                <block wx:if="{{score}}">观众评分<text>{{score}}</text></block>
+                <block wx:else>
+                    <text>{{wish}}</text>
+                    人想看
+                </block>
+            </view>
+            <view class="movieDesc__actors">
+                主演:
+                <text>{{actor}}</text>
+            </view>
             <view class="movieDesc__showInfo">{{showInfo}}</view>
         </view>
         <view class="btnContainer">
-            <movie-btn btnType="{{btnType}}">购票</movie-btn>
+            <movie-btn btnType="{{btnType}}">
+                <view>{{sellType}}</view>
+            </movie-btn>
         </view>
     </view>
 </view>

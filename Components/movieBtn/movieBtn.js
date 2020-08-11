@@ -9,6 +9,9 @@
  */
 
 Component({
+  options:{
+    multipleSlots: true
+  },
   /**
    * 组件的属性列表
    */
@@ -31,9 +34,9 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    btnReady(btnType = "sellBtn") {
-       return btnType;
-    },
+    // btnReady(btnType = "sellBtn") {
+    //    return btnType;
+    // },
   },
 
   /**
@@ -41,7 +44,7 @@ Component({
    */
   lifetimes: {
     created() {
-      this.btnReady(this.btnType);
+      // this.btnReady(this.btnType);
     },
   },
 });

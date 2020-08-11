@@ -3,7 +3,5 @@
     <block wx:if="{{btnType==='interestBtn'}}">
         <image class="intBtnImg" src="../../icons/miniIcon/loveIcon.png" />
     </block>
-    <text>
-        <slot></slot>
-    </text>
+    <slot></slot>
 </view>

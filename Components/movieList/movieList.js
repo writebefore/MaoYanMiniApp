@@ -18,8 +18,12 @@ Component({
       value: "v2d imax",
     },
     score:{
-      type:String,
-      value:"暂无"
+      type:Number,
+      value:0
+    },
+    wish:{
+      type:Number,
+      value:0
     },
     actor:{
       type:String,
@@ -29,9 +33,9 @@ Component({
       type:String,
       value:"未知"
     },
-    btnType:{
-      type:String,
-      value:"sellBtn"
+    showst:{
+      type:Number,
+      value:3
     }
   },
 
@@ -39,7 +43,8 @@ Component({
    * 组件的初始数据
    */
   data: {
-    
+    btnType:"sellBtn",
+    sellType:"购票"
   },
 
   /**
@@ -47,7 +52,6 @@ Component({
    */
   methods: {
     loadVersion(str) {
-      console.log(str);
       switch (str) {
         case "v2d imax":
           this.setData({
@@ -71,11 +75,26 @@ Component({
           break;
       }
     },
+    loadBtn(showst){
+      if(showst === 3){
+        this.setData({
+          btnType:"sellBtn",
+          sellType:"购票"
+        })
+      }else if(showst === 4){
+        this.setData({
+          btnType:"presellBtn",
+          sellType:"预售"
+        })
+        console.log(this.data.sellType);
+      }
+    }
   },
 
   lifetimes: {
     attached() {
       this.loadVersion(this.data.version);
+      this.loadBtn(this.data.showst);
     },
   },
 });
