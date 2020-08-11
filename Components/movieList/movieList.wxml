@@ -1,7 +1,7 @@
 <!-- Components/movieList.wxml -->
 <view class="movieList bottomLine">
     <view class="leftContainer">
-        <image class="movieImg" src="{{movieImg}}" />
+        <image class="movieImg" src="{{movieImg}}" lazy-load/>
     </view>
     <view class="rightContainer">
         <view class="movieDesc">
