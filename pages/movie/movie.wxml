@@ -23,6 +23,16 @@
             <movie-btn btnType="wantBtn">想看</movie-btn>
             <movie-btn btnType="interestBtn">想看</movie-btn> -->
             <movie-list version="v2d imax"></movie-list>
+            <scroll-view scroll-x="true">
+            <view scroll-x="true" class="banner">
+            <movie-trailer></movie-trailer>
+            <movie-trailer></movie-trailer>
+            <movie-trailer></movie-trailer>
+            <movie-trailer></movie-trailer>
+            <movie-trailer></movie-trailer>
+            <movie-trailer></movie-trailer>
+            </view>
+            </scroll-view>
         </view>
         <!-- 电影待映页 -->
         <view class="{{!isChoose ? 'waitPageContent' : 'isHidden'}}">2</view>

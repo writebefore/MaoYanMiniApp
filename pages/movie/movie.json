@@ -1,7 +1,8 @@
 {
   "usingComponents": {
     "movie-btn":"../../Components/movieBtn/movieBtn",
-    "movie-list":"../../Components/movieList/movieList"
+    "movie-list":"../../Components/movieList/movieList",
+    "movie-trailer":"../../Components/movieTrailer/movieTrailer"
   },
   "enablePullDownRefresh":true,
   "backgroundTextStyle":"dark"

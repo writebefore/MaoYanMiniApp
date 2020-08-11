@@ -14,7 +14,7 @@
     align-items: center;
 }
 
-.header::after{
+.header::after {
     content: '';
     width: 750rpx;
     height: 1rpx;
@@ -51,7 +51,7 @@
     color: #666666;
 }
 
-.text-choose{
+.text-choose {
     color: #DD543A;
 }
 
@@ -65,14 +65,14 @@
     background-color: red;
 }
 
-.header-right{
+.header-right {
     flex: 0.08 1 auto;
     height: 100%;
     display: flex;
     align-items: center;
 }
 
-.header-right::before{
+.header-right::before {
     content: '';
     width: 1rpx;
     height: 100%;
@@ -81,21 +81,25 @@
 }
 
 
-.searchIcon{
+.searchIcon {
     margin: 0 auto;
     width: 56rpx;
     height: 56rpx;
 }
 
-.hotPageContent{
+.hotPageContent {}
 
-}
-
-.waitPageContent{
+.waitPageContent {
     background-color: pink;
 }
 
 /* 切换内容容器 */
-.isHidden{
+.isHidden {
     display: none;
+}
+
+.banner {
+    height: 260rpx;
+    width: 700rpx;
+    display: flex;
 }

@@ -1,1 +1,50 @@
 /* Components/movieTrailer.wxss */
+.trailer-container {
+    width: 180rpx;
+    height: 250rpx;
+    margin: 10rpx;
+    display: inline-block;
+}
+
+.trailer__wrap {
+    height: 180rpx;
+    height: 200rpx;
+    position: relative;
+}
+
+.trailer__img {
+    width: 180rpx;
+    height: 200rpx;
+}
+
+
+
+.trailer__bg {
+    position: absolute;
+    width: 180rpx;
+    height: 65rpx;
+    background-image: linear-gradient(-180deg, rgba(77, 77, 77, 0), #000);
+    bottom: 0;
+}
+
+.trailer__score {
+    position: absolute;
+    width: 180rpx;
+    height: 40rpx;
+    bottom: 0rpx;
+    font-size: 24rpx;
+    line-height: 40rpx;
+    color: #FAAF00;
+    font-weight: bold;
+    text-align: center;
+}
+
+.trailer__title {
+    width: 180rpx;
+    height: 50rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 28rpx;
+    font-weight: bold;
+}

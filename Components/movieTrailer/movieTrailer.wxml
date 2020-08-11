@@ -1,2 +1,9 @@
-<!--Components/movieTrailer.wxml-->
-<text>Components/movieTrailer.wxml</text>
+<!-- Components/movieTrailer.wxml -->
+<view class="trailer-container">
+    <view class="trailer__wrap">
+        <image class="trailer__img" src="{{trailerImg}}" />
+        <view class="trailer__bg"></view>
+        <view class="trailer__score"><text>{{trailerShowInfo}}</text></view>
+    </view>
+    <view class="trailer__title">{{trailerTitle}}</view>
+</view>
