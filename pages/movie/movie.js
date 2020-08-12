@@ -5,7 +5,7 @@ Page({
    */
   data: {
     // 当前城市
-    localCity: "南昌",
+    localCity: "未知",
 
     // header标签选中热映
     isChoose: true,
@@ -24,6 +24,10 @@ Page({
 
     // 电影的数据保存，用于生成列表
     movieData: [],
+
+    // 是否到达底部
+    isLoading:false,
+    isBottom:false,
   },
 
   /**
@@ -38,6 +42,33 @@ Page({
         isChoose: !this.data.isChoose,
       });
     }
+  },
+
+  /**
+   * 显示底部load加载
+   */
+  showBottomLoad(){
+    this.setData({
+      isLoading:true
+    })
+  },
+
+  /**
+   * 隐藏底部load加载
+   */
+  hiddenBottomLoad(){
+    this.setData({
+      isLoading:false
+    })
+  },
+
+  /**
+   * 显示到底了
+   */
+  showAtBottom(){
+    this.setData({
+      isBottom:true
+    })
   },
 
   /**
@@ -92,7 +123,6 @@ Page({
         "Accept-Language": "zh-CN,zh;q=0.9",
       },
       success(res) {
-        console.log(res.data);
         self.dealAfterMovieListData(res.data);
       },
     });
@@ -146,6 +176,7 @@ Page({
     this.setData({
       movieData: afterMovieDataArr,
     });
+    this.hiddenBottomLoad()
     this.recordNowTotal();
   },
 
@@ -160,16 +191,53 @@ Page({
   },
 
   /**
+   * 获取当前城市位置
+   */
+  getCity(){
+    wx.getLocation({
+      success: (res)=>{
+        // console.log(res);
+        wx.request({
+          url:"https://api.map.baidu.com/reverse_geocoding/v3",
+          data:{
+            ak:"cXEgpe8l8CzOpZQ69DXb1dWfofyPLnIb",
+            output:"json",
+            coordtype:"wgs84ll",
+            location:`${res.latitude},${res.longitude}`
+          },
+          success:(res)=>{
+            // console.log(res);
+            this.setData({
+              localCity:res.data.result.addressComponent.city
+            })
+          },
+          fail:(err)=>{
+            console.log(err);
+          }
+        })
+      },
+      fail: ()=>{},
+      complete: ()=>{}
+    });
+  },
+  /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.getCity();
+    wx.showLoading({
+      title:"加载中...",
+      mask:true
+    });
     this.movieOnInfoList();
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {},
+  onReady: function () {
+    wx.hideLoading();
+  },
 
   /**
    * 生命周期函数--监听页面显示
@@ -196,7 +264,10 @@ Page({
    */
   onReachBottom: function () {
     if (this.data.total < this.data.movieNumber) {
+      this.showBottomLoad();
       this.afterMovieListData();
+    }else{
+      this.showAtBottom();
     }
   },
 

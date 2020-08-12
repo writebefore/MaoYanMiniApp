@@ -98,6 +98,16 @@
     display: none;
 }
 
+.toBottom{
+    width: 100%;
+    height: 60rpx;
+    text-align: center;
+    color: gray;
+    font-size: 24rpx;
+    line-height: 60rpx;
+}
+
+
 .banner {
     height: 260rpx;
     width: 700rpx;

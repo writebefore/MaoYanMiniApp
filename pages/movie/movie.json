@@ -2,7 +2,9 @@
   "usingComponents": {
     "movie-btn":"../../Components/movieBtn/movieBtn",
     "movie-list":"../../Components/movieList/movieList",
-    "movie-trailer":"../../Components/movieTrailer/movieTrailer"
+    "movie-trailer":"../../Components/movieTrailer/movieTrailer",
+    "mp-loading": "../../miniprogram_npm/weui-miniprogram/loading/loading"
+
   },
   "enablePullDownRefresh":true,
   "backgroundTextStyle":"dark"

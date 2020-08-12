@@ -35,4 +35,8 @@
         <!-- 电影待映页 -->
         <view class="{{!isChoose ? 'waitPageContent' : 'isHidden'}}">2</view>
     </view>
+    <view>
+        <mp-loading show="{{isLoading}}" type="circle"></mp-loading>
+        <view hidden="{{!isBottom}}" class="toBottom">——到底了——</view>
+    </view>
 </view>

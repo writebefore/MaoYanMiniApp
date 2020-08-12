@@ -4,6 +4,11 @@
     "pages/cinema/cinema",
     "pages/mine/mine"
   ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "是否允许小程序获取您当前的位置信息"
+    }
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#DC403B",
